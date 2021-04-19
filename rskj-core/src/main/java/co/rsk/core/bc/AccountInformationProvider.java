@@ -86,6 +86,12 @@ public interface AccountInformationProvider {
      * @param addr an address account
      * @return true if the addr identifies a contract
      */
+    boolean isExist(RskAddress addr);
+
+    /**
+     * @param addr an address account
+     * @return true if the addr identifies a contract
+     */
     boolean isContract(RskAddress addr);
 
     /**

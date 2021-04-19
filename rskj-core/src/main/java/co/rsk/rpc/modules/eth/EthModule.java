@@ -202,6 +202,34 @@ public class EthModule
         }
     }
 
+    public String exist(String address, String blockId) {
+        if (blockId == null) {
+            throw new NullPointerException();
+        }
+
+        try {
+            RskAddress addr = new RskAddress(address);
+
+            AccountInformationProvider accountInformationProvider = getAccountInformationProvider(blockId);
+
+            if(accountInformationProvider != null) {
+                boolean exists = accountInformationProvider.isExist(addr);
+
+                if (exists) {
+                    return "0x1";
+                }
+
+                return "0x0";
+            }
+
+            return "0x0";
+        } finally {
+            if (LOGGER.isDebugEnabled()) {
+                LOGGER.debug("eth_exists({}, {})", address, blockId);
+            }
+        }
+    }
+
     private AccountInformationProvider getAccountInformationProvider(String id) {
         switch (id.toLowerCase()) {
             case "pending":
