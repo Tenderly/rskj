@@ -76,7 +76,6 @@ public class ActivationConfigTest {
             "    rskip169: iris300",
             "    rskip170: iris300",
             "    rskip171: iris300",
-            "    rskip172: iris300",
             "    rskip174: iris300",
             "    rskip176: iris300",
             "    rskip179: iris300",
@@ -88,6 +87,9 @@ public class ActivationConfigTest {
             "    rskip197: iris300",
             "    rskip199: iris300",
             "    rskip200: iris300",
+            "    rskip201: iris300",
+            "    rskip218: iris300",
+            "    rskip220: iris300",
             "}"
     ));
 
